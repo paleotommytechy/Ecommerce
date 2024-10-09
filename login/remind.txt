@@ -1,0 +1,9 @@
+last video time 3:53:00
+
+ADMIN ID
+username: ifeoluwa
+password: tomiwa123
+
+for /F %i in (requirements.txt) do pip install %i || echo Failed to install %i , skipping...
+
+pip freeze > requirements.txt
