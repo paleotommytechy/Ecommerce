@@ -8,6 +8,7 @@ from .forms import LoginForm,MyPasswordChangeForm, MyPasswordResetForm,MySetPass
 
 
 urlpatterns = [
+    path('test/', views.test, name='test'),
     path('', views.home, name='home'),
     path('about/', views.about, name='about'),
     path('contact/', views.contact, name='contact'),

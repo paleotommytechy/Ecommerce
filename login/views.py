@@ -15,6 +15,9 @@ def about(request):
 def contact(request):
     return render(request, 'app/contact.html')
 
+def test(request):
+    return render(request, 'app/test.html')
+
 
 class CategoryView(View):
     def get(self, request, val):
