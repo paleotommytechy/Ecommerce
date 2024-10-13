@@ -20,6 +20,11 @@ urlpatterns = [
     path('updateAddress/<int:pk>', views.updateAddress.as_view(), name = 'updateAddress'),
     path('add-to-cart/', views.add_to_chart, name = 'add-to-cart'),
     path('cart/', views.show_chart, name = 'showchart'),
+    path('checkout/', views.checkout.as_view(), name = 'checkout'),
+
+   path('pluscart/', views.plus_cart),
+   path('minuscart/', views.minus_cart),
+   path('removecart/', views.remove_cart, name = "removecart"),
 
     #loggin authentication
     path('registration/', views.CustomerRegistrationView.as_view(), name = 'customer-reg'),

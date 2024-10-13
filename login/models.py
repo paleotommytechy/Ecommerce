@@ -52,3 +52,12 @@ class Cart(models.Model):
     @property
     def total_cost(self):
         return self.quantity * self.product.discounted_price
+    
+class OrderPlaced(models.Model):
+    user = models.ForeignKey(User, on_delete=models.CASCADE)
+    customer = models.ForeignKey(Customer, on_delete=models.CASCADE)
+    product = models.ForeignKey(Product, on_delete=models.CASCADE)
+    quantity = models.PositiveIntegerField(default=1)
+    @property
+    def total_cost(self):
+        return self.quantity * self.product.discounted_price
