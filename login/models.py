@@ -60,4 +60,4 @@ class OrderPlaced(models.Model):
     quantity = models.PositiveIntegerField(default=1)
     @property
     def total_cost(self):
-        return self.quantity * self.product.discounted_price
+        return self.quantity * self.product.discounted_price    
